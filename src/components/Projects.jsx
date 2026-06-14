@@ -7,7 +7,7 @@ export default function Projects() {
   const projects = [
     {
       title: "FYP - Automatic Offline Smart Wheelchair (MobilityX)",
-      category: "Data Science / ML",
+      category: "Computer Hardware / ML",
       description: "A hardware-based smart wheelchair featuring a local Voice Processing Module and a companion mobile app for real-time offline control.",
       metric: "95%+ Accuracy | <200ms Latency",
       github: "https://github.com/SibghaMursaleen",
