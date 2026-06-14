@@ -27,17 +27,6 @@ export default function Experience() {
       skills: ["Data Science", "Python", "Data Analysis", "Machine Learning", "Data Pipelines"]
     },
     {
-      role: "Digital Platforms Coordinator",
-      company: "VitaNova International Alliance for Sciences",
-      duration: "Feb 2026 - Present",
-      location: "Remote",
-      description: [
-        "Coordinated and managed web-based projects and digital platforms, ensuring seamless operations, platform reliability, and an enhanced digital experience for users across organizational systems.",
-        "Collaborated with cross-functional teams to optimize digital workflows, support platform improvements, and drive operational efficiency through effective technology and project coordination."
-      ],
-      skills: ["Digital Workflows", "Project Coordination", "Web Platforms", "Systems Management"]
-    },
-    {
       role: "FullStack Developer Intern",
       company: "DevelopersHub",
       duration: "Feb 2026 - Mar 2026",
@@ -47,16 +36,6 @@ export default function Experience() {
         "Designed and implemented 10+ REST APIs, along with user authentication (JWT) and cart functionality, delivering a fully responsive and deployed application."
       ],
       skills: ["React.js", "Node.js", "Express.js", "MongoDB Atlas", "REST APIs", "JWT Authentication"]
-    },
-    {
-      role: "Outreach Partner",
-      company: "Skills4U & Pakistan Career Fair",
-      duration: "Sep 2025 - Oct 2025",
-      location: "Hybrid",
-      description: [
-        "Promoted the conference, engaged the AI community, coordinated between organizers and participants, and contributed to discussions on emerging AI trends and societal impact."
-      ],
-      skills: ["Community Engagement", "Public Relations", "AI Coordination"]
     },
     {
       role: "AI/ML Intern",

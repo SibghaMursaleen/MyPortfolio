@@ -10,6 +10,7 @@ export default function Navbar() {
   const navLinks = [
     { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
+    { name: 'Volunteering', href: '#volunteering' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Publications', href: '#publications' },
@@ -26,7 +27,7 @@ export default function Navbar() {
       }
 
       // Determine active section based on scroll position
-      const sections = ['home', 'about', 'experience', 'skills', 'projects', 'publications', 'contact'];
+      const sections = ['home', 'about', 'experience', 'volunteering', 'skills', 'projects', 'publications', 'contact'];
       const current = sections.find(section => {
         const el = document.getElementById(section);
         if (el) {

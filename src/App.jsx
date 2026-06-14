@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Experience from './components/Experience';
+import Volunteering from './components/Volunteering';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Publications from './components/Publications';
@@ -56,6 +57,7 @@ export default function App() {
         <Hero />
         <About />
         <Experience />
+        <Volunteering />
         <Skills />
         <Projects />
         <Publications />

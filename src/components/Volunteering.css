@@ -1,0 +1,207 @@
+/* ── Volunteering Section ─────────────────────────────────────── */
+.volunteering-section {
+  position: relative;
+  z-index: 1;
+}
+
+.vol-timeline-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 50px;
+}
+
+/* Vertical rail — rose/pink gradient to distinguish from work exp */
+.vol-timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    #ec4899 0%,
+    #f472b6 50%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  border-radius: 1px;
+}
+
+.vol-timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+/* Dot */
+.vol-dot-wrapper {
+  position: absolute;
+  left: -50px;
+  top: 18px;
+  width: 42px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.vol-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 2px solid var(--border-color);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.vol-timeline-item:hover .vol-dot,
+.vol-timeline-item.vol-active-item .vol-dot {
+  background: linear-gradient(135deg, #ec4899, #f472b6);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
+}
+
+/* Card */
+.vol-card {
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.vol-timeline-item.vol-active-item .vol-card {
+  border-color: rgba(236, 72, 153, 0.35);
+  box-shadow: 0 10px 30px -10px rgba(236, 72, 153, 0.2), 0 0 15px rgba(236, 72, 153, 0.05);
+}
+
+.vol-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.vol-role-org {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.vol-role {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.vol-organisation {
+  color: #ec4899;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+}
+
+.vol-meta {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-left: auto;
+  align-items: center;
+}
+
+.vol-duration,
+.vol-location {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+
+.vol-expand-indicator {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.vol-timeline-item:hover .vol-expand-indicator {
+  color: var(--text-primary);
+}
+
+/* Accordion body */
+.vol-card-body {
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: left;
+}
+
+.vol-card-body.collapsed {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+}
+
+.vol-card-body.expanded {
+  max-height: 1000px;
+  opacity: 1;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(236, 72, 153, 0.08);
+}
+
+/* Skills badges */
+.badge-vol {
+  background: rgba(236, 72, 153, 0.05);
+  border: 1px solid rgba(236, 72, 153, 0.15);
+  color: var(--text-secondary);
+}
+
+.vol-timeline-item.vol-active-item .badge-vol {
+  background: rgba(236, 72, 153, 0.08);
+  border-color: rgba(236, 72, 153, 0.25);
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .vol-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .vol-meta {
+    margin-left: 0;
+    margin-top: 0.25rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .vol-expand-indicator {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .vol-timeline-container {
+    padding-left: 35px;
+  }
+  .vol-timeline-line {
+    left: 10px;
+  }
+  .vol-dot-wrapper {
+    left: -40px;
+  }
+  .vol-dot {
+    width: 28px;
+    height: 28px;
+  }
+  .vol-card {
+    padding: 1.25rem 1.5rem;
+  }
+}
