@@ -10,9 +10,8 @@ export default function Projects() {
       category: "Computer Hardware / ML",
       description: "A hardware-based smart wheelchair featuring a local Voice Processing Module and a companion mobile app for real-time offline control.",
       metric: "95%+ Accuracy | <200ms Latency",
-      github: "https://github.com/SibghaMursaleen",
+      github: "https://github.com/SibghaMursaleen/FYP_MobilityX_MobileAPP",
       demo: "#",
-      appLink: "https://github.com/SibghaMursaleen",
       hardwareDeployment: "Sukkur IBA University",
       stack: ["Arduino IDE", "Python", "Deep Learning", "Signal Processing", "Speech Recognition", "Mobile App"],
       details: "This hardware-software co-design features an offline voice recognition engine running on local hardware, paired with a custom mobile application for control and monitoring. The system translates voice commands into directional controls with extreme latency efficiency (<200 ms) and robust noise-filtering, ensuring safety and accessibility."
