@@ -16,17 +16,6 @@ export default function Experience() {
       skills: ["Backend AI Engineering", "Python", "API Development", "System Integration"]
     },
     {
-      role: "Data Science Intern",
-      company: "Arch Technologies",
-      duration: "Jun 2026 - Present ",
-      location: "Remote",
-      description: [
-        "Currently interning at Arch Technologies as a Data Science Intern.",
-        "Focusing on data preprocessing, feature engineering, statistical modeling, and data-driven insights."
-      ],
-      skills: ["Data Science", "Python", "Data Analysis", "Machine Learning", "Data Pipelines"]
-    },
-    {
       role: "FullStack Developer Intern",
       company: "DevelopersHub",
       duration: "Feb 2026 - Mar 2026",
