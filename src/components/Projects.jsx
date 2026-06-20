@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ExternalLink, Code, Eye, X, Check } from 'lucide-react';
+import { useState } from 'react';
+import { ExternalLink, Eye, X, Check } from 'lucide-react';
 import './Projects.css';
 
 export default function Projects() {
@@ -15,6 +15,16 @@ export default function Projects() {
       hardwareDeployment: "Sukkur IBA University",
       stack: ["Arduino IDE", "Python", "Deep Learning", "Signal Processing", "Speech Recognition", "Mobile App"],
       details: "This hardware-software co-design features an offline voice recognition engine running on local hardware, paired with a custom mobile application for control and monitoring. The system translates voice commands into directional controls with extreme latency efficiency (<200 ms) and robust noise-filtering, ensuring safety and accessibility."
+    },
+    {
+      title: "CyberShield Security Suite",
+      category: "Cybersecurity / ML",
+      description: "An AI-powered mobile security suite designed to detect phishing links, audit application privileges, and evaluate credential health using a local ML engine.",
+      metric: "97%+ ML Accuracy | Phishing Shield",
+      github: "https://github.com/SibghaMursaleen/CyberShield-MobileApp",
+      demo: "#",
+      stack: ["Flutter", "Dart", "FastAPI", "Python", "Random Forest", "SQLite", "JWT Auth"],
+      details: "A comprehensive, privacy-first Android security app. It implements an offline-capable Random Forest classifier trained on the 31-dimension UCI phishing websites dataset, parses URLs into 30 structural/SSL features in real-time, audits Android APK permission combinations to expose spyware vectors, and evaluates password entropy. Built with a Flutter frontend and a secure FastAPI backend supporting token-based JWT authentication and encrypted transaction histories."
     },
     {
       title: "SIBA Complaint Management System",
