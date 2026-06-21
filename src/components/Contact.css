@@ -74,6 +74,8 @@
 .info-details {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .info-label {
@@ -91,6 +93,7 @@
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
+  word-break: break-all;
 }
 
 a.info-value:hover {
@@ -226,5 +229,17 @@ a.info-value:hover {
   }
   .form-row-2 {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-list-row {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 290px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1.5rem;
   }
 }
