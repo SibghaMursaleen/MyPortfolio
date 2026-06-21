@@ -38,11 +38,11 @@ export default function About() {
                 <span className="stat-label">CGPA</span>
               </div>
               <div className="stat-card">
-                <span className="stat-value">5+</span>
-                <span className="stat-label">Internships & Roles</span>
+                <span className="stat-value">4</span>
+                <span className="stat-label">Internships</span>
               </div>
               <div className="stat-card">
-                <span className="stat-value">7+</span>
+                <span className="stat-value">10+</span>
                 <span className="stat-label">Core Projects</span>
               </div>
             </div>
