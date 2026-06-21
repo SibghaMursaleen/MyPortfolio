@@ -16,7 +16,7 @@ export default function Contact() {
           <div className="contact-info glass-panel contact-info-full">
             <h3 className="contact-card-title">Let's build something together</h3>
             <p className="contact-card-desc">
-              Whether you are looking to hire a Software Engineer, need a pipeline built for your data pipelines, or want to collaborate on predictive machine learning projects, feel free to reach out. I'm always open to discussing tech opportunities!
+              Whether you are looking to hire a Full-Stack Web Developer, need an immersive 3D frontend layout designed, or want to collaborate on backend architectures and machine learning projects, feel free to reach out. I'm always open to discussing tech opportunities!
             </p>
 
             <div className="info-list info-list-row">

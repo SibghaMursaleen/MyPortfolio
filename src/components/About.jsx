@@ -6,7 +6,7 @@ export default function About() {
   const certifications = [
     { title: "Machine Learning Specialization", issuer: "Stanford University - Coursera", details: "Supervised & Unsupervised ML, Neural Networks, Advanced Decision Trees" },
     { title: "Flutter App Development", issuer: "Flutter Sukkur", details: "Cross-platform mobile apps, state management, API integration" },
-    { title: "Data Analytics", issuer: "Leverify Quest", details: "Data wrangling, SQL, data modeling, storytelling with data" },
+    { title: "Responsive Web Development & 3D Styling", issuer: "Leverify Tech", details: "Responsive layouts, advanced CSS transformations, interactive animations, and UX design" },
     { title: "GenAI App Development", issuer: "PEC, PakAngels, Aspire Pakistan", details: "Large Language Models, prompt tuning, generative agent flows" }
   ];
 
@@ -23,10 +23,10 @@ export default function About() {
           <div className="about-bio glass-panel">
             <h3 className="bio-title">My Journey</h3>
             <p className="bio-text">
-              I am a <strong>Computer Systems Engineer</strong> graduate from Sukkur IBA University (June 2026). My academic foundation in hardware-software co-design, coupled with a deep interest in computing systems, has shaped my passion for building high-performance applications and data architectures.
+              I am a <strong>Computer Systems Engineer</strong> graduate from Sukkur IBA University (June 2026). My academic foundation in hardware-software co-design, coupled with a deep interest in high-performance computing, has shaped my passion for building immersive frontends, robust backend services, and intelligent computing systems.
             </p>
             <p className="bio-text">
-              With hands-on experience in full-stack web platforms and machine learning research, I am actively building my career around <strong>Software Engineering</strong>, <strong>Data Engineering</strong>, and <strong>Data Science</strong>. I thrive at the intersection of developing structured application systems, building robust data ingestion pipelines, and translating raw data into intelligent, predictive systems.
+              With hands-on experience in full-stack web platforms and interactive user interfaces, I am actively building my career around <strong>Web Development</strong> (both 3D Front-End and Backend architectures) and <strong>Data Science / AI</strong>. I thrive at the intersection of crafting visual, animated web designs, constructing secure database schemas, and integrating predictive neural models.
             </p>
             <p className="bio-text">
               I love solving complex problems, optimizing code latency, and engineering systems that remain performant and scalable under load.

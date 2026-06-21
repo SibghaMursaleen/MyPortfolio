@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ExternalLink, Eye, X, Check } from 'lucide-react';
+import ThreeDInteractive from './ThreeDInteractive';
 import './Projects.css';
 
 export default function Projects() {
@@ -7,7 +8,7 @@ export default function Projects() {
   const projects = [
     {
       title: "FYP - Automatic Offline Smart Wheelchair (MobilityX)",
-      category: "Computer Hardware / ML",
+      category: "Computer Hardware / AI",
       description: "A hardware-based smart wheelchair featuring a local Voice Processing Module and a companion mobile app for real-time offline control.",
       metric: "95%+ Accuracy | <200ms Latency",
       github: "https://github.com/SibghaMursaleen/FYP_MobilityX_MobileAPP",
@@ -18,7 +19,7 @@ export default function Projects() {
     },
     {
       title: "CyberShield Security Suite",
-      category: "Cybersecurity / ML",
+      category: "Cybersecurity / AI",
       description: "An AI-powered mobile security suite designed to detect phishing links, audit application privileges, and evaluate credential health using a local ML engine.",
       metric: "97%+ ML Accuracy | Phishing Shield",
       github: "https://github.com/SibghaMursaleen/CyberShield-MobileApp",
@@ -28,7 +29,7 @@ export default function Projects() {
     },
     {
       title: "SIBA Complaint Management System",
-      category: "Software Engineering",
+      category: "Web Development / Backend",
       description: "ASP.NET Core MVC workflow coordinator for managing departmental issues with real-time thread-based resolution feeds.",
       metric: "-25% Issue Resolution Time | 5+ Depts",
       github: "https://github.com/SibghaMursaleen/complaint-management-system-aspnet",
@@ -38,7 +39,7 @@ export default function Projects() {
     },
     {
       title: "Full-Stack E-Commerce Platform",
-      category: "Software Engineering",
+      category: "Web Development / Full-Stack",
       description: "Built a responsive e-commerce web application with fully customized API endpoints, cart controls, and secure user sessions.",
       metric: "10+ REST APIs | 50+ Products",
       github: "https://github.com/SibghaMursaleen/ecommerce-fullstack-design",
@@ -48,7 +49,7 @@ export default function Projects() {
     },
     {
       title: "WeatherInsight AI Weather Suite",
-      category: "Software Engineering",
+      category: "Web Development / Frontend",
       description: "Responsive weather reporting dashboard integrating historical rainfall trend visualizations and AI clothing advisor engines.",
       metric: "+30% Recommendation Relevance",
       github: "https://github.com/SibghaMursaleen/WeatherInsight-Modern-Weather-Dashboard-Web-App",
@@ -58,23 +59,13 @@ export default function Projects() {
     },
     {
       title: "Gesture-Controlled Filter App",
-      category: "Data Science / ML",
+      category: "Computer Vision / AI",
       description: "Real-time computer vision utility utilizing MediaPipe hand tracking to trigger dynamic cinematic overlays.",
       metric: "98% Detection Accuracy | 6+ Effects",
       github: "https://github.com/SibghaMursaleen/Gesture_Filter_App",
       demo: "#",
       stack: ["Python", "OpenCV", "MediaPipe", "Computer Vision", "Landmark Analysis"],
       details: "Tracks 21 hand landmarks at high FPS. Employs coordinate analysis to detect specific hand gestures and triggers interactive video overlays, like camera flash, neon glows, and photo filters, on live video streams."
-    },
-    {
-      title: "AI-Mini Copilot ChatBot",
-      category: "Data Science / ML",
-      description: "Context-aware conversational LLM assistant featuring advanced prompt engineering and local context management.",
-      metric: "+25% Response Relevance | 50+ Queries",
-      github: "https://github.com/SibghaMursaleen/AI_Mini_Copilot",
-      demo: "#",
-      stack: ["Python", "Hugging Face", "LLMs", "Prompt Engineering", "NLP"],
-      details: "Built a localized AI chat assistant with prompt-tuning workflows. Features custom context management that feeds system instructions and chat history to the model dynamically, resulting in high accuracy."
     }
   ];
 
@@ -161,6 +152,13 @@ export default function Projects() {
                     <h4 className="modal-subheading">Project Overview</h4>
                     <p className="modal-long-desc">{selectedProject.details}</p>
                   </div>
+
+                  {selectedProject.is3DShowcase && (
+                    <div className="modal-3d-demo-container">
+                      <h4 className="modal-subheading">Live Interactive 3D Canvas Preview</h4>
+                      <ThreeDInteractive isModalMode={true} />
+                    </div>
+                  )}
 
                   {selectedProject.hardwareDeployment && (
                     <div className="modal-hardware-callout glass-panel">

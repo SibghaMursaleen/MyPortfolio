@@ -1,16 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { Mail, ArrowUpRight, Code, Database, Sparkles } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Mail, ArrowUpRight, Sparkles, Server } from 'lucide-react';
 import profileImg from '../assets/profile.png';
+import ThreeDInteractive from './ThreeDInteractive';
 import './Hero.css';
 
 export default function Hero() {
-  const titles = ["Software Engineer", "Data Engineer", "Data Scientist"];
+  const titles = ["Full-Stack Web Developer", "3D Front-End Engineer", "AI & Data Scientist"];
   const [titleIndex, setTitleIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const typingSpeed = 100;
   const deletingSpeed = 50;
   const pauseTime = 1500;
+
+  const [tiltStyle, setTiltStyle] = useState({});
 
   useEffect(() => {
     let timer;
@@ -57,6 +60,34 @@ export default function Hero() {
     }
   };
 
+  const handleMouseMoveTilt = (e) => {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const dx = (x - centerX) / centerX; // -1 to 1
+    const dy = (y - centerY) / centerY; // -1 to 1
+
+    // Rotate max 12 degrees
+    const rotateX = -dy * 12;
+    const rotateY = dx * 12;
+
+    setTiltStyle({
+      transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`,
+      transition: 'transform 0.1s ease-out'
+    });
+  };
+
+  const handleMouseLeaveTilt = () => {
+    setTiltStyle({
+      transform: 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)',
+      transition: 'transform 0.5s ease-out'
+    });
+  };
+
   return (
     <section id="home" className="hero-section">
       {/* Background decoration */}
@@ -86,7 +117,7 @@ export default function Hero() {
           </div>
 
           <p className="hero-description">
-            A Computer Systems Engineer dedicated to building scalable software systems, optimizing data pipelines, and unlocking insights through machine learning. Bridging full-stack development and data science to build impactful solutions.
+            A Computer Systems Engineer dedicated to building responsive web architectures, crafting interactive 3D frontend layouts, and developing predictive machine learning systems. Bridging full-stack development, 3D design, and artificial intelligence to build premium web solutions.
           </p>
 
           <div className="hero-actions">
@@ -112,8 +143,16 @@ export default function Hero() {
         </div>
 
         <div className="hero-visual">
+          <div className="hero-3d-bg-wrapper">
+            <ThreeDInteractive />
+          </div>
           <div className="visual-card-wrapper animate-float">
-            <div className="visual-card glass-panel profile-photo-panel">
+            <div 
+              className="visual-card glass-panel profile-photo-panel"
+              onMouseMove={handleMouseMoveTilt}
+              onMouseLeave={handleMouseLeaveTilt}
+              style={tiltStyle}
+            >
               <div className="card-topbar">
                 <span className="dot dot-red"></span>
                 <span className="dot dot-yellow"></span>
@@ -124,10 +163,10 @@ export default function Hero() {
                 <img src={profileImg} alt="Sibgha Mursaleen" className="profile-image" />
               </div>
               <div className="card-floating-badge badge-se">
-                <Code size={14} /> Software
+                <Sparkles size={14} /> Frontend & 3D
               </div>
               <div className="card-floating-badge badge-de">
-                <Database size={14} /> Data
+                <Server size={14} /> Backend & DB
               </div>
             </div>
           </div>

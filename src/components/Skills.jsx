@@ -1,54 +1,53 @@
 import React from 'react';
-import { Code, Database, BrainCircuit, Terminal } from 'lucide-react';
+import { Sparkles, Server, BrainCircuit } from 'lucide-react';
 import './Skills.css';
 
 export default function Skills() {
   const skillCategories = [
     {
-      title: "Software Engineering",
-      icon: <Code size={22} />,
+      title: "Frontend & 3D Design",
+      icon: <Sparkles size={22} />,
       colorClass: "skills-se",
-      description: "Building robust, responsive application architectures and interactive user interfaces.",
+      description: "Crafting immersive 3D interfaces, high-fidelity styles, and responsive application flows.",
       skills: [
         { name: "React.js & JavaScript", level: 90 },
-        { name: "Node.js & Express.js", level: 85 },
-        { name: "ASP.NET Core MVC & C#", level: 80 },
+        { name: "Three.js & React Three Fiber", level: 85 },
+        { name: "WebGL & GLSL Shaders", level: 80 },
+        { name: "CSS 3D & GSAP Animations", level: 88 },
+        { name: "HTML5 & CSS3 / Tailwind", level: 92 },
         { name: "Flutter & Mobile Dev", level: 75 },
-        { name: "Java & Java Swing", level: 85 },
-        { name: "REST APIs & JWT Auth", level: 90 },
-        { name: "HTML5 & CSS3 / Tailwind", level: 92 }
+        { name: "Responsive UI/UX Design", level: 90 }
       ]
     },
     {
-      title: "Data Engineering",
-      icon: <Database size={22} />,
+      title: "Backend & Databases",
+      icon: <Server size={22} />,
       colorClass: "skills-de",
-      description: "Structuring schema models, pipeline operations, and optimizing query retrieval execution.",
+      description: "Developing performant RESTful APIs, securing endpoints, and designing robust data schemas.",
       skills: [
+        { name: "Node.js & Express.js", level: 85 },
+        { name: "ASP.NET Core MVC & C#", level: 80 },
+        { name: "REST APIs & JWT Auth", level: 90 },
         { name: "SQL & MySQL Database", level: 88 },
         { name: "MongoDB & Atlas Integration", level: 85 },
         { name: "Database Schema Design", level: 85 },
-        { name: "Query Optimization", level: 80 },
-        { name: "ETL & Data Ingestion", level: 78 },
-        { name: "Python Scripting", level: 90 },
         { name: "CRUD API Engineering", level: 88 },
         { name: "Git & Version Control", level: 90 }
       ]
     },
     {
-      title: "Data Science & ML",
+      title: "Data Science & AI",
       icon: <BrainCircuit size={22} />,
       colorClass: "skills-ds",
-      description: "Developing models, feature engineering, computer vision tracking, and dataset analytics.",
+      description: "Building deep learning architectures, dataset pipelines, computer vision systems, and Generative AI workflows.",
       skills: [
         { name: "Python, NumPy & Pandas", level: 92 },
-        { name: "Scikit-Learn & Modeling", level: 88 },
+        { name: "Scikit-Learn & ML Modeling", level: 88 },
         { name: "PyTorch & Deep Learning", level: 80 },
-        { name: "OpenCV & MediaPipe", level: 85 },
-        { name: "TensorFlow & Keras", level: 75 },
-        { name: "Data Preprocessing", level: 90 },
-        { name: "Feature Engineering", level: 85 },
-        { name: "LLM Prompt Tuning", level: 80 }
+        { name: "OpenCV & Computer Vision", level: 85 },
+        { name: "Generative AI & Agentic Flows", level: 82 },
+        { name: "Data Preprocessing & Analytics", level: 90 },
+        { name: "Feature Engineering", level: 85 }
       ]
     }
   ];

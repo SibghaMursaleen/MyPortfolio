@@ -184,10 +184,24 @@
   position: relative;
 }
 
+.hero-3d-bg-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 580px;
+  height: 580px;
+  z-index: 0;
+  pointer-events: auto;
+  opacity: 0.75;
+}
+
 .visual-card-wrapper {
   width: 100%;
   max-width: 420px;
   position: relative;
+  z-index: 2;
+  perspective: 1000px;
 }
 
 .visual-card {
@@ -197,6 +211,8 @@
   border-radius: 12px;
   position: relative;
   overflow: visible;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 }
 
 .card-topbar {
@@ -206,6 +222,7 @@
   margin-bottom: 1.25rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
   padding-bottom: 0.75rem;
+  transform: translateZ(15px);
 }
 
 .dot {
@@ -233,6 +250,7 @@
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.05);
   background: rgba(0, 0, 0, 0.3);
+  transform: translateZ(25px);
 }
 
 .profile-image {
@@ -261,7 +279,7 @@
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-md);
   z-index: 10;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .badge-se {
@@ -269,6 +287,7 @@
   right: -25px;
   color: var(--primary);
   border-color: rgba(99, 102, 241, 0.3);
+  transform: translateZ(45px);
 }
 
 .badge-de {
@@ -276,14 +295,17 @@
   left: -20px;
   color: var(--secondary);
   border-color: rgba(6, 182, 212, 0.3);
+  transform: translateZ(45px);
 }
 
 .visual-card-wrapper:hover .badge-se {
-  transform: translateY(-5px) scale(1.05);
+  transform: translateZ(55px) translateY(-3px) scale(1.05);
+  border-color: var(--primary);
 }
 
 .visual-card-wrapper:hover .badge-de {
-  transform: translateY(5px) scale(1.05);
+  transform: translateZ(55px) translateY(3px) scale(1.05);
+  border-color: var(--secondary);
 }
 
 /* Responsiveness */
