@@ -19,14 +19,12 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Set scrolled state for background change
       if (window.scrollY > 50) {
         setScrolled(true);
       } else {
         setScrolled(false);
       }
 
-      // Determine active section based on scroll position
       const sections = ['home', 'about', 'experience', 'volunteering', 'skills', 'projects', 'publications', 'contact'];
       const current = sections.find(section => {
         const el = document.getElementById(section);
@@ -66,10 +64,16 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="navbar-container">
-        <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="navbar-brand">
-          <Terminal size={20} className="brand-icon" />
-          <span>Sibgha<span className="brand-dot">.</span></span>
-        </a>
+        <div className="navbar-brand-wrapper">
+          <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="navbar-brand">
+            <Terminal size={18} className="brand-icon" />
+            <span>Sibgha<span className="brand-dot">.</span></span>
+          </a>
+          <div className="availability-badge">
+            <span className="status-dot"></span>
+            <span className="status-text">Available Now</span>
+          </div>
+        </div>
 
         {/* Desktop Nav */}
         <div className="navbar-links">
@@ -84,7 +88,7 @@ export default function Navbar() {
             </a>
           ))}
           <a href="#contact" onClick={(e) => handleLinkClick(e, '#contact')} className="btn btn-primary btn-sm-nav">
-            Let's Talk
+            Book a Call
           </a>
         </div>
 
@@ -108,7 +112,7 @@ export default function Navbar() {
             </a>
           ))}
           <a href="#contact" onClick={(e) => handleLinkClick(e, '#contact')} className="btn btn-primary drawer-btn">
-            Let's Talk
+            Book a Call
           </a>
         </div>
       </div>

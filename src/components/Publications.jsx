@@ -30,7 +30,7 @@ export default function Publications() {
         </div>
 
         <div className="publication-card-wrapper">
-          <div className="publication-card glass-panel">
+          <div className="publication-card glass-panel blueprint-grid">
 
             <div className="paper-icon-side">
               <div className="paper-doc-icon">

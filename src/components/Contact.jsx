@@ -13,7 +13,7 @@ export default function Contact() {
         </div>
 
         <div className="contact-centered">
-          <div className="contact-info glass-panel contact-info-full">
+          <div className="contact-info glass-panel blueprint-grid contact-info-full">
             <h3 className="contact-card-title">Let's build something together</h3>
             <p className="contact-card-desc">
               Whether you are looking to hire a Full-Stack Web Developer, need an immersive 3D frontend layout designed, or want to collaborate on backend architectures and machine learning projects, feel free to reach out. I'm always open to discussing tech opportunities!

@@ -85,7 +85,7 @@ export default function Experience() {
 
                 {/* Timeline Card */}
                 <div
-                  className="timeline-card glass-panel"
+                  className="timeline-card glass-panel blueprint-grid"
                   onClick={() => toggleExpand(index)}
                 >
                   <div className="card-header-exp">

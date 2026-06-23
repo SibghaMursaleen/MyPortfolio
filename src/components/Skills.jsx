@@ -50,7 +50,7 @@ export default function Skills() {
 
         <div className="skills-grid-container">
           {skillCategories.map((category, index) => (
-            <div key={index} className={`skills-card glass-panel ${category.colorClass}`}>
+            <div key={index} className={`skills-card glass-panel blueprint-grid ${category.colorClass}`}>
               <div className="skills-card-header">
                 <div className="skills-icon-box">
                   {category.icon}

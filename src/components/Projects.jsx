@@ -85,7 +85,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="project-card glass-panel"
+              className="project-card glass-panel blueprint-grid"
               onClick={() => setSelectedProject(project)}
             >
               <div className="project-card-header">
@@ -132,7 +132,7 @@ export default function Projects() {
         {/* Project Case Study Modal */}
         {selectedProject && (
           <div className="modal-overlay" onClick={() => setSelectedProject(null)}>
-            <div className="modal-content glass-panel" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-content glass-panel blueprint-grid" onClick={(e) => e.stopPropagation()}>
               <button className="modal-close-btn" onClick={() => setSelectedProject(null)} aria-label="Close modal">
                 <X size={20} />
               </button>

@@ -5,6 +5,18 @@ import './Volunteering.css';
 export default function Volunteering() {
   const volunteering = [
     {
+      role: "Head of Testing Team & Backend Team Member",
+      organisation: "VitaNova International Alliance for Sciences",
+      duration: "Jun 2026 - Present",
+      location: "Daharki, Pakistan (Remote)",
+      description: [
+        "Leading the website testing team by planning and executing quality assurance activities, identifying bugs, and ensuring a seamless user experience.",
+        "Contributing to backend development by implementing server-side functionality, managing databases, developing APIs, and supporting core website features.",
+        "Collaborating with developers and stakeholders to ensure the website is reliable, secure, and performs efficiently."
+      ],
+      skills: ["Back-End Web Development", "Website Testing", "API Development", "Team Collaboration"]
+    },
+    {
       role: "Digital Platforms Coordinator",
       organisation: "VitaNova International Alliance for Sciences",
       duration: "Feb 2026 - Present",
@@ -61,7 +73,7 @@ export default function Volunteering() {
 
                 {/* Card */}
                 <div
-                  className="vol-card glass-panel"
+                  className="vol-card glass-panel blueprint-grid"
                   onClick={() => toggleExpand(index)}
                 >
                   <div className="vol-card-header">
