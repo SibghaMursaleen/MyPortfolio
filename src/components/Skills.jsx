@@ -1,37 +1,24 @@
 import React from 'react';
-import { Sparkles, Server, BrainCircuit } from 'lucide-react';
+import { Sparkles, BrainCircuit } from 'lucide-react';
 import './Skills.css';
 
 export default function Skills() {
   const skillCategories = [
     {
-      title: "Frontend & 3D Design",
+      title: "Full-Stack Web & 3D Development",
       icon: <Sparkles size={22} />,
       colorClass: "skills-se",
-      description: "Crafting immersive 3D interfaces, high-fidelity styles, and responsive application flows.",
+      description: "Crafting interactive 3D interfaces, high-performance APIs, robust databases, and responsive web applications.",
       skills: [
         { name: "React.js & JavaScript", level: 90 },
         { name: "Three.js & React Three Fiber", level: 85 },
-        { name: "WebGL & GLSL Shaders", level: 80 },
-        { name: "CSS 3D & GSAP Animations", level: 88 },
-        { name: "HTML5 & CSS3 / Tailwind", level: 92 },
-        { name: "Flutter & Mobile Dev", level: 75 },
-        { name: "Responsive UI/UX Design", level: 90 }
-      ]
-    },
-    {
-      title: "Backend & Databases",
-      icon: <Server size={22} />,
-      colorClass: "skills-de",
-      description: "Developing performant RESTful APIs, securing endpoints, and designing robust data schemas.",
-      skills: [
+        { name: "WebGL & GSAP Animations", level: 86 },
+        { name: "HTML5, CSS3 & Tailwind", level: 92 },
         { name: "Node.js & Express.js", level: 85 },
-        { name: "ASP.NET Core MVC & C#", level: 80 },
+        { name: "ASP.NET Core & C#", level: 80 },
         { name: "REST APIs & JWT Auth", level: 90 },
-        { name: "SQL & MySQL Database", level: 88 },
-        { name: "MongoDB & Atlas Integration", level: 85 },
-        { name: "Database Schema Design", level: 85 },
-        { name: "CRUD API Engineering", level: 88 },
+        { name: "SQL & NoSQL Databases", level: 87 },
+        { name: "Flutter & Mobile Dev", level: 75 },
         { name: "Git & Version Control", level: 90 }
       ]
     },
