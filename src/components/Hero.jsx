@@ -5,7 +5,7 @@ import ThreeDInteractive from './ThreeDInteractive';
 import './Hero.css';
 
 export default function Hero() {
-  const titles = ["Full-Stack Web Developer", "3D Front-End Engineer", "AI & Data Scientist"];
+  const titles = ["Full-Stack Web Developer", "Data Scientist"];
   const [titleIndex, setTitleIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -147,7 +147,7 @@ export default function Hero() {
             <ThreeDInteractive />
           </div>
           <div className="visual-card-wrapper animate-float">
-            <div 
+            <div
               className="visual-card glass-panel profile-photo-panel"
               onMouseMove={handleMouseMoveTilt}
               onMouseLeave={handleMouseLeaveTilt}
