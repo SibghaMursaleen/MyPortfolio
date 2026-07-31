@@ -373,7 +373,8 @@ function App() {
                   <p style={{ color: 'var(--charcoal-light)', fontSize: '0.9rem' }}>Download my updated resume containing my complete academic studies and technical project logs.</p>
                 </div>
                 <a 
-                  href="mailto:sibghamursaleen722@gmail.com?subject=Requesting Resume - Backend AI Engineer" 
+                  href="/Sibgha_Mursaleen_Resume.pdf" 
+                  download="Sibgha_Mursaleen_Resume.pdf"
                   className="cta-button accent"
                   style={{ textDecoration: 'none', display: 'inline-flex', gap: '0.5rem', alignItems: 'center' }}
                 >
@@ -382,7 +383,7 @@ function App() {
                     <polyline points="7 10 12 15 17 10"></polyline>
                     <line x1="12" y1="15" x2="12" y2="3"></line>
                   </svg>
-                  Request Resume CV
+                  Download Resume
                 </a>
               </div>
             </section>

@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Resume ignore
+public/Sibgha_Mursaleen_Resume.pdf
+
