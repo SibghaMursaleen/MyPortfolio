@@ -344,20 +344,21 @@ function App() {
             {/* Skills Section */}
             <section id="skills" className="proof-section" style={{ borderTop: '1px solid var(--border)', paddingTop: '4rem', marginTop: '4rem' }}>
               <div className="section-label">Skills</div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '1rem' }}>
+              <div className="skills-grid">
                 {[
-                  'Python',
-                  'JavaScript',
-                  'FastAPI / Express',
-                  'SQLite',
-                  'Docker',
-                  'Git & GitHub',
-                  'REST APIs',
-                  'Machine Learning',
-                  'Supabase'
+                  { name: 'Python', desc: 'Advanced web scraping, data parsing, and AI model scripting.' },
+                  { name: 'JavaScript', desc: 'Dynamic state management, React rendering cycles, and event tracking.' },
+                  { name: 'FastAPI / Express', desc: 'Building high-performance REST APIs, routers, and middleware dependencies.' },
+                  { name: 'SQLite', desc: 'Local database normalization, indexes, and transactional query routines.' },
+                  { name: 'Docker', desc: 'Packaging backend containers, managing volumes, and docker-compose networking.' },
+                  { name: 'Git & GitHub', desc: 'VCS version control, pull requests, clean branches, and merge paths.' },
+                  { name: 'REST APIs', desc: 'Configuring clean routes, validation models, request schemas, and error responses.' },
+                  { name: 'Machine Learning', desc: 'System prompt layering frameworks, RAG indexing pipelines, and LLM integrations.' },
+                  { name: 'Supabase', desc: 'Securing API endpoints using OAuth hooks and JSON Web Token validations.' }
                 ].map((skill, idx) => (
-                  <div key={idx} style={{ backgroundColor: 'var(--white)', border: '1px solid var(--border)', borderRadius: 'var(--radius)', padding: '1.25rem', textAlign: 'center', boxShadow: 'var(--shadow-sm)', transition: 'var(--transition)' }}>
-                    <div style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--navy)' }}>{skill}</div>
+                  <div key={idx} className="skill-card">
+                    <div className="skill-name">{skill.name}</div>
+                    <div className="skill-desc">{skill.desc}</div>
                   </div>
                 ))}
               </div>
