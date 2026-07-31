@@ -30,6 +30,26 @@ function CaseStudy({ caseData, onBack, onContactClick }) {
             <h4>Tech Stack</h4>
             <p>{caseData.stack.join(' • ')}</p>
           </div>
+          {caseData.githubLink && (
+            <div className="meta-item">
+              <h4>Codebase</h4>
+              <p>
+                <a 
+                  href={caseData.githubLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: '0.25rem', fontWeight: 600, color: 'var(--amber)' }}
+                >
+                  GitHub Source
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </p>
+            </div>
+          )}
         </div>
       </header>
 
@@ -76,9 +96,22 @@ function CaseStudy({ caseData, onBack, onContactClick }) {
             <p style={{ marginBottom: '1.5rem' }}>
               I can adapt similar backend configurations, authentication logic, or rate-limited scraping pipelines to match your product's requirements.
             </p>
-            <button className="cta-button accent" onClick={onContactClick}>
-              Message Me
-            </button>
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <button className="cta-button accent" onClick={onContactClick}>
+                Message Me
+              </button>
+              {caseData.githubLink && (
+                <a 
+                  href={caseData.githubLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="cta-button" 
+                  style={{ textDecoration: 'none', backgroundColor: 'transparent', color: 'var(--navy)', borderColor: 'var(--border)' }}
+                >
+                  View Code on GitHub
+                </a>
+              )}
+            </div>
           </section>
         </main>
       </div>
