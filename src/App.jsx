@@ -203,10 +203,31 @@ function App() {
     if (!formData.name || !formData.email || !formData.message) return;
 
     setFormStatus('submitting');
-    setTimeout(() => {
-      setFormStatus('success');
-      setFormData({ name: '', email: '', message: '' });
-    }, 1000);
+    
+    fetch("https://formsubmit.co/ajax/sibghamursaleen722@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message
+      })
+    })
+      .then(response => {
+        if (response.ok) {
+          setFormStatus('success');
+          setFormData({ name: '', email: '', message: '' });
+        } else {
+          setFormStatus('error');
+        }
+      })
+      .catch(error => {
+        console.error("Form submission error:", error);
+        setFormStatus('error');
+      });
   };
 
   const currentCaseData = caseStudies.find(c => c.id === selectedCaseId);
@@ -372,6 +393,11 @@ function App() {
                     </div>
                   ) : (
                     <form onSubmit={handleFormSubmit}>
+                      {formStatus === 'error' && (
+                        <div style={{ color: '#d9534f', fontSize: '0.85rem', marginBottom: '1.25rem', padding: '0.75rem', backgroundColor: '#fdf7f7', border: '1px solid #ebccd1', borderRadius: 'var(--radius)', fontWeight: 500 }}>
+                          Unable to deliver message. Please contact directly at: <a href="mailto:sibghamursaleen722@gmail.com">sibghamursaleen722@gmail.com</a>
+                        </div>
+                      )}
                       <div className="form-group">
                         <label htmlFor="name">Name</label>
                         <input 
